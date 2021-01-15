@@ -1,0 +1,72 @@
+.movieRow{       /* item geral */
+    margin-bottom: 30px;
+}
+
+.movieRow h2 {    /* apenas para trabalhar com a margem de baixo */
+    margin: 0px 0px 0px 30px;
+}
+
+.movieRow--listarea {    /* tudo que passar da tela no lado horizontal é cortado */
+    overflow-x : hidden;
+    padding-left: 30px;
+}
+
+.movieRow--list {    /* transição da lista */
+    transition : all ease 0.2s;
+}
+
+.movieRow--item{    /* inline block para um item ficar ao lado do outro */
+    display: inline-block;
+    width:150px;
+    cursor: pointer;
+}
+
+.movieRow--item img{   /* controlo da imagem */
+   width: 100%;
+   transform: scale(0.9);
+   transition : all ease 0.2s;
+}
+
+
+.movieRow--item img:hover{   /* efeito de passar o rato em cima do item */
+    transform: scale(1);
+ }
+
+ .movieRow-left, 
+ .movieRow-right {  /* butoes que vão fazer as transiçoes dos filmes */    
+    position:absolute;   
+    width: 40px;
+    height: 225px;
+    background-color:rgba(147, 153, 158, 0.548);
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor:pointer;
+    opacity: 0;
+    transition : all ease 0.2s;
+}
+
+ .movieRow-left{ /* posição do da esquerda */
+     left: 0;
+ }
+
+ .movieRow-right{ /* posição do da direita*/
+    right: 0;
+}
+
+.movieRow:hover .movieRow-left, 
+.movieRow:hover .movieRow-right{ /* opacidade do botão */
+    opacity: 1;
+}
+
+
+@media (max-width: 760px){ /* conversão da resolucão para modo telemovel */
+    .movieRow-left,
+    .movieRow-right {
+    opacity: 1;
+    }
+}
+
+

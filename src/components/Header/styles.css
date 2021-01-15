@@ -1,0 +1,33 @@
+header{  /* fix para o header nao empurrar o destaque para baixo */
+    position: fixed;
+    z-index: 999;
+    top:0px;
+    left: 0px;
+    right:0px;
+    height: 70px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    background: transparent;
+    transition:  all ease 0.5s;
+}
+header.black{ /* background do header */
+    background:#6d7477c9;  
+}
+.header--logo{ /* tamanho do logo */
+    height: 125px;    
+}
+
+.header--logo img{ /* altura do logo */
+    height: 100%;
+}
+
+.header--user{ /* tamanho do icone do utilizador */
+    height: 55px;
+}
+
+.header--user img {  /* controlo do tamanho das imagens  */
+    height: 100%;
+    border-radius: 3px;
+}
